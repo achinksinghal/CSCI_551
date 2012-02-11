@@ -1,0 +1,32 @@
+++Name: 	ACHINTYA SINGHAL
+++Student Id: 	4414-3387-71
+
+
+++The objective of this project is to emulate a M/M/2 queue using multi-threading within a single process. 
+
+
+++Code Files:
+
+mm2.cc: This file contains the code for the main function of emulation.
+
+queue.cc: This file contains the code for queue functionality.
+
+time_551.cc: This file contains the code for time related functions.
+
+queue.h: This file is the header file for functions defined in queue.cc.
+
+time_551.h: This file is the header file for functions defined in time_551.cc.
+
+Makefile: This file is makefile for compiling code and creating mm2 binary.
+
+
+++Design Desicion:
+
+1. After CTRL + c is pressed, any next client will be dropped and Q1 will be emptied.
+
+2. Client that are dropped as because CTRL + c is pressed are not considerd in customer drop probability.
+
+3. Average inter-arrival time and service time are printed in milliseconds.
+
+++Code reference:
+	Code is reffered from the project specification.
