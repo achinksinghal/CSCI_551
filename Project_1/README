@@ -1,0 +1,40 @@
+++Name: 	ACHINTYA SINGHAL
+++Student Id: 	4414-3387-71
+
+
+++The objective of this project is to implement a server-client module where server can handle three types of client's requests which are address, filsize and get. 
+
+
+++Code Files:
+
+server.cc: This file contains the code for server. Server sets certain parameters which are given as command-line arguments. Server gets request from the client. It creates new thread for each client and handles the request in the thread. Server, then, sends the response to the respective clients in these threads.
+
+client.cc: This file contains the code for client. Client sets certain parameters which are given as command-line arguments. Client can request server three types of requests which are address, filesize and get. Clients receives the response from the server.
+
+sock.cc: This file contains the code for socket creation, connect, receiving and sending data.
+
+common.cc: This file contains the code for packing/unpacking of data before sending/after receiving of data.
+
+Makefile: This file is makefile for compiling code and creating client and server binaries.
+
+server.h: This header contains declarations of functions which are defined in server.cc.
+
+common.h: This header contains declarations of functions which are defined in common.cc.
+
+sock.h: This header contains declarations of functions which are defined in sock.cc.
+
+
+++Design Desicion:
+
+1. Server handles the requests by creating a thread for each user and send response in that thread only.
+
+2. For receiving Get request response data at client, only one byte malloc is done.
+
+3. Buffer used for sending requests response are allocated at maximum 512 bytes.
+
+
+++Code reference:
+	Code is reffered from the beej tutorial:
+	http://www.beej.us/guide/bgnet/
+	and 
+	http://www.beej.us/guide/bgc/
